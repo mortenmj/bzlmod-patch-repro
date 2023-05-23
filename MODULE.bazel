@@ -1,0 +1,8 @@
+bazel_dep(name = "google_safetext", version = "0.0.0")
+
+git_override(
+    module_name = "google_safetext",
+    remote = "https://github.com/google/safetext.git",
+    commit = "7156a760e523a4a42f0959a6ce3aed85a31c01a9",
+    patches = ["//:google_safetext.patch"],
+)
